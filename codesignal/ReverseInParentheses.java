@@ -1,12 +1,5 @@
 package codesignal;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Queue;
-
 public class ReverseInParentheses {
     public static void main(String[] args) {
         ReverseInParentheses reverseInParentheses = new ReverseInParentheses();
@@ -25,6 +18,4 @@ public class ReverseInParentheses {
         }
         return sb.toString();
     }
-
-
 }
