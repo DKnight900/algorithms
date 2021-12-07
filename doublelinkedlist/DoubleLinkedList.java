@@ -19,8 +19,8 @@ public class DoubleLinkedList<K>  implements MyList<K>
     {
         Node newNode = new Node(content);
         
-        if(initNode==null)
-            initNode=newNode;
+        if(initNode == null)
+            initNode = newNode;
         else
         {
             if(!initNode.hasNext())
@@ -47,16 +47,16 @@ public class DoubleLinkedList<K>  implements MyList<K>
             {
                 if(currentNode.getContent().equals(content))
                 {
-                    if(currentNode.getPreviousNode()==null)//init node
+                    if(currentNode.getPreviousNode() == null)//init node
                     {                        
-                        if(currentNode.getNextNode()!=null)                        
+                        if(currentNode.getNextNode() != null)
                         {
-                            initNode=currentNode.getNextNode();
+                            initNode = currentNode.getNextNode();
                             currentNode.getNextNode().setPreviousNode(null);
                             currentNode.setNextNode(null);                            
                         }                        
                     }
-                    else if(currentNode.getNextNode()==null)//last node
+                    else if(currentNode.getNextNode() == null)//last node
                     {
                         lastNode=currentNode.getPreviousNode();
                         currentNode.getPreviousNode().setNextNode(null);
@@ -69,11 +69,11 @@ public class DoubleLinkedList<K>  implements MyList<K>
                         currentNode.setNextNode(null);
                         currentNode.setPreviousNode(null);                        
                     }
-                    currentNode=null;
+                    currentNode = null;
                 }
-                if(currentNode!=null)
-                    currentNode=currentNode.getNextNode();
-            }while(currentNode!=null);
+                if (currentNode != null)
+                    currentNode = currentNode.getNextNode();
+            } while(currentNode != null);
         }        
     }
     @Override

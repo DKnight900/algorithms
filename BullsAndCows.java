@@ -1,5 +1,3 @@
-package algorithms;
-
 /**
  *
  * @author DKnight900
@@ -64,24 +62,24 @@ public class BullsAndCows
     }
     public String getHint(String secret, String guess) 
     {
-        String hint="0A0B";
-        int bulls=0;
-        int cows=0;
+        String hint = "0A0B";
+        int bulls = 0;
+        int cows = 0;
         int i;
         int currentSecretChar;
         int currentGuessChar;
         
-        int secretPositions[]= new int[10];
-        int guessPositions[]= new int[10];
+        int secretPositions[] = new int[10];
+        int guessPositions[] = new int[10];
         
-        if(secret.length()==guess.length() && secret.length()>0)
+        if(secret.length() == guess.length() && secret.length() > 0)
         {
-            for(i=0;i<secret.length();i++)
+            for(i = 0; i < secret.length(); i++)
             {
-                currentSecretChar=((int)secret.charAt(i))-48;
-                currentGuessChar=((int)guess.charAt(i))-48;
+                currentSecretChar = ((int)secret.charAt(i)) - 48;
+                currentGuessChar = ((int)guess.charAt(i)) - 48;
 
-                if(currentSecretChar==currentGuessChar)
+                if(currentSecretChar == currentGuessChar)
                     bulls++;
                 else
                 {            
@@ -89,20 +87,19 @@ public class BullsAndCows
                     guessPositions[currentGuessChar]++;                                    
                 }
             }
-            for(i=0;i<=9;i++)
+            for(i = 0; i <= 9; i++)
             {
-                if(guessPositions[i]!=0 && secretPositions[i]!=0)
+                if(guessPositions[i] != 0 && secretPositions[i] != 0)
                 {
-                    if(guessPositions[i]<=secretPositions[i])
-                        cows+=guessPositions[i];                
+                    if(guessPositions[i] <= secretPositions[i])
+                        cows += guessPositions[i];
                     else
-                        cows+=secretPositions[i];
+                        cows += secretPositions[i];
                 }
 
             }        
-            hint=bulls+"A"+cows+"B";            
+            hint = bulls + "A" + cows + "B";
         }
         return hint;       
-    }        
-    
+    }
 }
