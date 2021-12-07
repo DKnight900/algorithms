@@ -1,5 +1,3 @@
-package algorithms;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -37,30 +35,30 @@ public class WordPattern
     {                                
         Map<String,String> patternToStrMap = new HashMap<>();
         
-        boolean matched=false;
-        int i,j;
+        boolean matched = false;
+        int i, j;
         String currentPattern;
         String currentStr;
         
-        String strTransformed="";
+        String strTransformed = "";
         StringTokenizer stringTokenizer;
         
         if(!(pattern.isEmpty() || str.isEmpty()))
         {        
             stringTokenizer = new StringTokenizer(str);
-            if(stringTokenizer.countTokens()!=pattern.length())
-                matched=false;
+            if(stringTokenizer.countTokens() != pattern.length())
+                matched = false;
             else
             {
-                for(i=0;i<pattern.length();i++)
+                for(i = 0; i < pattern.length(); i++)
                 {
-                    currentPattern=String.valueOf(pattern.charAt(i));
+                    currentPattern = String.valueOf(pattern.charAt(i));
                     currentStr=stringTokenizer.nextToken();
                     if(patternToStrMap.isEmpty())                
-                        patternToStrMap.put(currentPattern,currentStr);                                    
+                        patternToStrMap.put(currentPattern, currentStr);
                     else
                     {
-                        j=0;
+                        j = 0;
                         for(String patternString:patternToStrMap.keySet())
                         {
 
@@ -68,31 +66,30 @@ public class WordPattern
                                 break;
                             j++;
                         }
-                        if(j==patternToStrMap.size())                    
+                        if(j == patternToStrMap.size())
                         {
-                            j=0;
+                            j = 0;
                             for(String strString:patternToStrMap.values())
                             {
                                 if(strString.equals(currentStr))
                                     break;
                                 j++;
                             }
-                            if(j==patternToStrMap.size())
-                                patternToStrMap.put(currentPattern,currentStr);
+                            if(j == patternToStrMap.size())
+                                patternToStrMap.put(currentPattern, currentStr);
                         }
 
                     }                
                 }            
-                for(i=0;i<pattern.length();i++)
+                for(i = 0; i < pattern.length(); i++)
                 {
-                    currentPattern=String.valueOf(pattern.charAt(i));
+                    currentPattern = String.valueOf(pattern.charAt(i));
                     if(patternToStrMap.containsKey(currentPattern))
-                        strTransformed=strTransformed.concat(patternToStrMap.get(currentPattern)).concat(" ");                                        
+                        strTransformed = strTransformed.concat(patternToStrMap.get(currentPattern)).concat(" ");
                 }
                 matched=strTransformed.trim().equals(str);                                    
             }               
         }
         return matched;
     }
-    
 }

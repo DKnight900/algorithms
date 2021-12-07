@@ -10,12 +10,12 @@ import java.util.Deque;
 
 /**
  *
- * @author Mario Alberto Morales
+ * @author DKnight900
  */
 public class SumTwoArrays {
     public static void main(String[] args) {                        
-        System.out.println(sumTwoArrays(new int[]{8,5,3,9,6}, new int[]{3,3,3,3,3}));
-        System.out.println(sumTwoArrays(new int[]{3,3,3,3,3}, new int[]{8,5,3,9,6}));
+        System.out.println(sumTwoArrays(new int[]{8, 5, 3, 9, 6}, new int[]{3, 3, 3, 3, 3}));
+        System.out.println(sumTwoArrays(new int[]{3, 3, 3, 3, 3}, new int[]{8, 5, 3, 9, 6}));
     }
     private static Deque<Integer> sumTwoArrays(int[] a, int[] b) {
         int lengthA = a.length;

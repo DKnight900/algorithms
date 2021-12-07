@@ -1,5 +1,3 @@
-package algorithms;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +55,7 @@ public class SpiralMatrix
                     break;
                 i--;
                 x--;
-                for(j=y-1;j>=w;j--)
+                for(j = y - 1; j >= w; j--)
                 {
                     results.add(matrix[i][j]);
                     prints++;
@@ -66,12 +64,12 @@ public class SpiralMatrix
                     break;
                 j++;
                 w++;
-                for(i=x-1;i>=z;i--)        
+                for(i = x - 1; i>=z; i--)
                 {
                     results.add(matrix[i][j]);
                     prints++;
                 }
-                if(prints==columns*rows)
+                if(prints == columns * rows)
                     break;
                 z++;            
                 i++;
