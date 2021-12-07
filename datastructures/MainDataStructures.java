@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package algorithms;
+package datastructures;
 
-import algorithms.binarytree.BinaryTree;
-import algorithms.doublelinkedlist.DoubleLinkedList;
-import algorithms.singlelinkedlist.SingleLinkedList;
-import java.util.StringTokenizer;
+import binarytree.BinaryTree;
+import doublelinkedlist.DoubleLinkedList;
+import singlelinkedlist.SingleLinkedList;
 
 /**
  *
- * @author 904935
+ * @author DKnight900
  */
 public class MainDataStructures 
 {
