@@ -3,7 +3,7 @@ package codesignal;
 public class AbsoluteValueSumMinimization {
     public static void main(String[] args) {
         AbsoluteValueSumMinimization absoluteValueSumMinimization = new AbsoluteValueSumMinimization();
-        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17, 18};
+        int[] a = {1, 2, 3, 4, 5, 6, 7, 8, 15, 16, 17};
         System.out.println(absoluteValueSumMinimization.absoluteValuesSumMinimization(a));
     }
 
