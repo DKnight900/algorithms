@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ *
+ * @author DKnight900
+ */
 public class NTreeImpl {
     public static void main(String[] args) {
 
